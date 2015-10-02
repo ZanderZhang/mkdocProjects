@@ -62,7 +62,7 @@
         }, 
         {
             "location": "/about/", 
-            "text": "wechat: zanderzhang\n\n\nblog\n\n\nmkdoc\u597d\u50cf\u4e0d\u652f\u6301\u5fae\u535a\u56fe\u5e8a.", 
+            "text": "wechat: zanderzhang\n\n\nblog\n\n\nMkDocs\u597d\u50cf\u4e0d\u652f\u6301\u5fae\u535a\u56fe\u5e8a.", 
             "title": "\u5173\u4e8e"
         }, 
         {
@@ -76,9 +76,9 @@
             "title": "blog"
         }, 
         {
-            "location": "/about/#mkdoc", 
+            "location": "/about/#mkdocs", 
             "text": "", 
-            "title": "mkdoc\u597d\u50cf\u4e0d\u652f\u6301\u5fae\u535a\u56fe\u5e8a."
+            "title": "MkDocs\u597d\u50cf\u4e0d\u652f\u6301\u5fae\u535a\u56fe\u5e8a."
         }
     ]
 }
