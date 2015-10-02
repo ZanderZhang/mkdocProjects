@@ -167,7 +167,7 @@
         <li class="main active"><a href="#ios-andriod-poi">iOS Andriod百度地图仿百度外卖 饿了么 选择我的地址 POI检索</a></li>
         
     
-        <li class="main "><a href="#uiimageviewgeoreversegeopointmapstatustargetgeopt">取屏幕中心点,也就是UIImageView的坐标:geo.reverseGeoPoint=mapStatus.targetGeoPt;</a></li>
+        <li class="main "><a href="#uiimageview">取屏幕中心点,也就是UIImageView的坐标:</a></li>
         
     
         <li class="main "><a href="#resultpoilist">回调函数获得反编译结果和周边result.poiList:</a></li>
@@ -176,7 +176,7 @@
         <li class="main "><a href="#poipoi">第二个图,我开始使用在线建议查询,后面发现这个POI搜索更好用点,它有三种,我使用的是POI城市内搜索:</a></li>
         
     
-        <li class="main "><a href="#-voidongetpoiresultbmkpoisearch-searcher-resultbmkpoiresult-poiresult-errorcodebmksearcherrorcodeerrorcode_suggestionsearcharr-removeallobjects">回调返回:-(void)onGetPoiResult:(BMKPoiSearch )searcher result:(BMKPoiResult )poiResult errorCode:(BMKSearchErrorCode)errorCode{[_suggestionSearchArr removeAllObjects];</a></li>
+        <li class="main "><a href="#_1">回调返回:</a></li>
         
     
     </ul>
@@ -195,7 +195,8 @@
     imaV.image=[UIImage imageNamed:@"poi_icon"];
     [self.view addSubview:imaV];
 }</pre></p>
-<h3 id="uiimageviewgeoreversegeopointmapstatustargetgeopt">取屏幕中心点,也就是<code>UIImageView</code>的坐标:<br><code>geo.reverseGeoPoint=mapStatus.targetGeoPt;</code></h3>
+<h3 id="uiimageview">取屏幕中心点,也就是<code>UIImageView</code>的坐标:</h3>
+<p><code>geo.reverseGeoPoint=mapStatus.targetGeoPt;</code></p>
 <p>geo是<code>BMKReverseGeoCodeOption *geo;</code>
 移动完成会调用:
 <pre>
@@ -206,17 +207,17 @@
     NSLog(@"mapStatusDidChanged");
 }</pre></p>
 <h3 id="resultpoilist">回调函数获得反编译结果和周边result.poiList:</h3>
-<p><br>
-<pre>-(void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch <em>)searcher result:(BMKReverseGeoCodeResult </em>)result errorCode:(BMKSearchErrorCode)error{</p>
-<pre><code>[geoArr removeAllObjects];
-[geoArr addObjectsFromArray:result.poiList];
-if (result.poiList.count) {
-    BMKPoiInfo *info=result.poiList[0];
-    _city=info.city;
-}
-[_bottomTable reloadData];
-</code></pre>
-<p>}</pre></p>
+<pre>-(void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error{
+
+    [geoArr removeAllObjects];
+    [geoArr addObjectsFromArray:result.poiList];
+    if (result.poiList.count) {
+        BMKPoiInfo *info=result.poiList[0];
+        _city=info.city;
+    }
+    [_bottomTable reloadData];
+}</pre>
+
 <h3 id="poipoi"><strong>第二个图</strong>,我开始使用<code>在线建议查询</code>,后面发现这个<code>POI搜索</code>更好用点,它有三种,我使用的是<code>POI城市内搜索</code>:</h3>
 <p><br>开始检索:
 <br><pre>_bMKPoiSearch =[[BMKPoiSearch alloc]init];
@@ -226,10 +227,10 @@ if (result.poiList.count) {
     option.city =_city;
     option.keyword  = searchText;
     [_bMKPoiSearch poiSearchInCity:option];</pre></p>
-<h3 id="-voidongetpoiresultbmkpoisearch-searcher-resultbmkpoiresult-poiresult-errorcodebmksearcherrorcodeerrorcode_suggestionsearcharr-removeallobjects">回调返回:<br><pre>-(void)onGetPoiResult:(BMKPoiSearch <em>)searcher result:(BMKPoiResult </em>)poiResult errorCode:(BMKSearchErrorCode)errorCode{[_suggestionSearchArr removeAllObjects];</h3>
-<pre><code>[_suggestionSearchArr addObjectsFromArray:poiResult.poiInfoList];
-[_suggestionTable reloadData];}`&lt;/pre&gt;
-</code></pre>
+<h3 id="_1">回调返回:</h3>
+<p><pre>-(void)onGetPoiResult:(BMKPoiSearch <em>)searcher result:(BMKPoiResult </em>)poiResult errorCode:(BMKSearchErrorCode)errorCode{[_suggestionSearchArr removeAllObjects];
+    [_suggestionSearchArr addObjectsFromArray:poiResult.poiInfoList];
+    [_suggestionTable reloadData];}`</pre></p>
 <p>在<code>poiResult</code>里面有<code>poiInfoList</code>,成员是<code>BMKPoiInfo</code>,跟第一个图一样.</p>
 <p>Andriod和这差不多,函数有所区别.有需要demo的朋友可以留邮箱.</p></div>
             
