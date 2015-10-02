@@ -164,13 +164,19 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">记得备份你的项目!</a></li>
+        <li class="main active"><a href="#cocoapods">工程移除CocoaPods依赖库</a></li>
+        
+            <li><a href="#_1">项目目录下,在你的终端就是这样的顺序:</a></li>
+        
+    
+        <li class="main "><a href="#_2">记得备份你的项目!</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
+<h2 id="cocoapods">工程移除CocoaPods依赖库</h2>
 <p>点这里---&gt;<a href="http://code4app.com/article/cocoapods-install-usage">CocoaPods安装和使用教程</a></p>
 <p><br>当我们工程安装很多第三方开源类库,有时候不需要时,我们可以将其移除.<br>
 在stackoverflow发现<a href="http://stackoverflow.com/questions/16427421/how-to-remove-cocoapods-from-a-project">How to remove CocoaPods from a project?</a></p>
@@ -195,15 +201,15 @@ Workspace</pre></p>
 </li>
 </ul>
 <p>如果还存在问题,可以把之前用到的库的路径移除,<img alt="" src="http://ww1.sinaimg.cn/large/773d7193gw1ewfofs3rz0j20ne03u0tx.jpg" /></p>
-<p>项目目录下,在你的终端就是这样的顺序:
-<pre>gem install cocoapods-deintegrate
+<h3 id="_1">项目目录下,在你的终端就是这样的顺序:</h3>
+<p><pre>gem install cocoapods-deintegrate
 pod deintegrate
 gem install cocoapods-clean
 pod clean
 rm Podfile
 </pre></p>
 <p>最后你可以在<code>Podfile</code>添加新的库使用,或不使用<code>CocoaPods</code>,当然还有<a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
-<h2 id="_1"><font color=red>记得备份你的项目!</h2></div>
+<h2 id="_2"><font color=red>记得备份你的项目!</h2></div>
             
         </div>
 

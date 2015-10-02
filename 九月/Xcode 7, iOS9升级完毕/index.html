@@ -164,11 +164,15 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#xcode-7-ios9">Xcode 7, iOS9升级完毕</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <hr />
+<h2 id="xcode-7-ios9">Xcode 7, iOS9升级完毕</h2>
 <p><h5>刚刚iMac升级Xcode 7,手机也升了iOS9.
 <br>
 关于xcode,有人在微博上贴出来了,说通过非官方途径下载的可能会有问题,好多人都去各种网盘,迅雷找资源下载,原因你懂的,天朝的互联网特色嘛.我是在Mac App Store更新的Xcode7, 网络还挺快.</p>
@@ -179,7 +183,7 @@
 
 <h4>第一个更漂酿,而且有四种选择,第二个围脖是个好图床就只有图片链接,所以微博图床不解释.
 ---
-<h5>打开xcode还是显示load 还是 skip bundle,是因为我装了插件的原因,反正点load就是了. 之后我开始跑代码.现在只发现两个小问题.
+###打开xcode还是显示load 还是 skip bundle,是因为我装了插件的原因,反正点load就是了. 之后我开始跑代码.现在只发现两个小问题.
 
 * 第一个好像也是自己代码的问题,
 
@@ -187,8 +191,7 @@
 这样在之前没啥问题的,现在error了,我就去[stackoverflow](http://stackoverflow.com/questions/3910244/getting-current-device-language-in-ios)搜了一下,有人说私有api,还给我这个链接,我改成这个之后,就OK了.
 
 <pre>```NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];```</pre>
-
-* 后面还一个是bitcode的问题,![](http://ww3.sinaimg.cn/large/773d7193gw1ew5q0cq7n8j20wi01i75n.jpg)
+ #### 后面还一个是bitcode的问题,![](http://ww3.sinaimg.cn/large/773d7193gw1ew5q0cq7n8j20wi01i75n.jpg)
 
 我在Debug里面改了一下,改成No之后就好了.</div>
             
