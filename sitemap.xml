@@ -11,39 +11,7 @@
 
     
     <url>
-     <loc>None/Xcode 7, iOS9升级完毕/</loc>
-     <lastmod>2015-10-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/Xcode6出现多个模拟器-显示的都是UUID-没有版本号/</loc>
-     <lastmod>2015-10-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/hexo部署到gitcafe上静态博客/</loc>
-     <lastmod>2015-10-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索/</loc>
-     <lastmod>2015-10-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>None/工程移除CocoaPods依赖库/</loc>
+     <loc>None/about/</loc>
      <lastmod>2015-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
