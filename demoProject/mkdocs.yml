@@ -1,0 +1,21 @@
+site_name: zander
+pages:
+- 主页: index.md
+- 笔记:
+  - 九月:
+    - hexo部署到gitcafe上静态博客: 九月/hexo部署到gitcafe上静态博客.md
+    - iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索: 九月/iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索.md
+    - Xcode 7, iOS9升级完毕: 九月/Xcode 7, iOS9升级完毕.md
+    - Xcode6出现多个模拟器-显示的都是UUID-没有版本号: 九月/Xcode6出现多个模拟器-显示的都是UUID-没有版本号.md
+    - 工程移除CocoaPods依赖库: 九月/工程移除CocoaPods依赖库.md
+
+
+- 关于: about.md
+
+
+site_favicon: favicon.ico
+site_url: https://github.com/ZanderZhang?tab=repositories
+repo_url: https://github.com/ZanderZhang?tab=repositories
+repo_name: GitHub
+site_author: zander
+google_analytics: ['UA-36723568-3', 'http://zanderzhang.github.io/']
