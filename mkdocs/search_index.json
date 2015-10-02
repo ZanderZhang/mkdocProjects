@@ -2,8 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\u65f6\u95f4\u8fc7\u5f97\u592a\u5feb,\u8bb0\u5f55\u4e00\u4e9b\u4e1c\u897f", 
+            "text": "\u6b22\u8fce\n\n\n\u8fd9\u91cc\u662f \nzander\n \u7684\u516c\u5f00\u7b14\u8bb0\u672c\u3002\n\n\n\u8fd9\u4e2a\u7b14\u8bb0\u672c\u57fa\u4e8e \nMkDocs\n \u6784\u5efa.\n\n\n\u65f6\u95f4\u8fc7\u5f97\u592a\u5feb,\u8bb0\u5f55\u4e00\u4e9b\u4e1c\u897f.", 
             "title": "\u4e3b\u9875"
+        }, 
+        {
+            "location": "/#_1", 
+            "text": "\u8fd9\u91cc\u662f  zander  \u7684\u516c\u5f00\u7b14\u8bb0\u672c\u3002  \u8fd9\u4e2a\u7b14\u8bb0\u672c\u57fa\u4e8e  MkDocs  \u6784\u5efa.  \u65f6\u95f4\u8fc7\u5f97\u592a\u5feb,\u8bb0\u5f55\u4e00\u4e9b\u4e1c\u897f.", 
+            "title": "\u6b22\u8fce"
         }, 
         {
             "location": "/\u4e5d\u6708/hexo\u90e8\u7f72\u5230gitcafe\u4e0a\u9759\u6001\u535a\u5ba2/", 
