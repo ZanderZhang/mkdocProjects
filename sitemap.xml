@@ -3,15 +3,25 @@
 
     
     <url>
-     <loc>None/</loc>
+     <loc>http://zanderzhang.github.io/mkdocProjects//</loc>
      <lastmod>2015-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>None/about/</loc>
+     <loc>http://zanderzhang.github.io/mkdocProjects/</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>http://zanderzhang.github.io/mkdocProjects//about/</loc>
      <lastmod>2015-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
