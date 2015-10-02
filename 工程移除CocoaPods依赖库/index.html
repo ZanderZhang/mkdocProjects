@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>My Docs</title>
+	<title>工程移除CocoaPods依赖库 - My Docs</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">My Docs</a>
+            <a class="navbar-brand" href="..">My Docs</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -54,37 +54,37 @@
                 
                 
                     <li >
-                        <a href=".">Home</a>
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Xcode 7, iOS9升级完毕/">Xcode 7, iOS9升级完毕</a>
+                        <a href="../Xcode 7, iOS9升级完毕/">Xcode 7, iOS9升级完毕</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="Xcode6出现多个模拟器-显示的都是UUID-没有版本号/">Xcode6出现多个模拟器 显示的都是UUID 没有版本号</a>
+                        <a href="../Xcode6出现多个模拟器-显示的都是UUID-没有版本号/">Xcode6出现多个模拟器 显示的都是UUID 没有版本号</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="hexo部署到gitcafe上静态博客/">Hexo部署到gitcafe上静态博客</a>
+                        <a href="../hexo部署到gitcafe上静态博客/">Hexo部署到gitcafe上静态博客</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索/">iOS Andriod百度地图仿百度外卖 饿了么 选择我的地址 POI检索</a>
+                        <a href="../iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索/">iOS Andriod百度地图仿百度外卖 饿了么 选择我的地址 POI检索</a>
                     </li>
                 
                 
                 
-                    <li >
-                        <a href="工程移除CocoaPods依赖库/">工程移除CocoaPods依赖库</a>
+                    <li class="active">
+                        <a href="./">工程移除CocoaPods依赖库</a>
                     </li>
                 
                 
@@ -98,8 +98,8 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../iOS-Andriod百度地图仿百度外卖-饿了么-选择我的地址-POI检索/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -117,15 +117,50 @@
 
         <div class="container">
             
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#_1">记得备份你的项目!</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<p>点这里---&gt;<a href="http://code4app.com/article/cocoapods-install-usage">CocoaPods安装和使用教程</a></p>
+<p><br>当我们工程安装很多第三方开源类库,有时候不需要时,我们可以将其移除.<br>
+在stackoverflow发现<a href="http://stackoverflow.com/questions/16427421/how-to-remove-cocoapods-from-a-project">How to remove CocoaPods from a project?</a></p>
+<p><br>第二个answer比较简单</p>
+<p>需要用到两个<code>CocoaPods plugin</code></p>
+<ul>
+<li><a href="https://github.com/kylef/cocoapods-deintegrate">cocoapods-deintegrate</a><ul>
+<li>安装<code>gem install cocoapods-deintegrate</code></li>
+<li>运行<code>pod deintegrate</code></li>
+</ul>
+</li>
+</ul>
+<p>这一步之后就剩下<pre>Podfile
+Podfile.lock
+Workspace</pre></p>
+<ul>
+<li>可以手动移除剩下的这三个,也可以用到<a href="https://github.com/BendingSpoons/cocoapods-clean">cocoapods-clean</a><ul>
+<li>安装<code>gem install cocoapods-clean</code></li>
+<li>运行<code>pod clean</code></li>
+<li>最后运行<code>rm Podfile</code>移除<code>Podfile</code></li>
+</ul>
+</li>
+</ul>
+<p>如果还存在问题,可以把之前用到的库的路径移除,<img alt="" src="http://ww1.sinaimg.cn/large/773d7193gw1ewfofs3rz0j20ne03u0tx.jpg" /></p>
+<p>项目目录下,在你的终端就是这样的顺序:
+<pre>gem install cocoapods-deintegrate
+pod deintegrate
+gem install cocoapods-clean
+pod clean
+rm Podfile
+</pre></p>
+<p>最后你可以在<code>Podfile</code>添加新的库使用,或不使用<code>CocoaPods</code>,当然还有<a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<h2 id="_1"><font color=red>记得备份你的项目!</h2></div>
+            
         </div>
 
         <footer class="col-md-12">
@@ -134,12 +169,12 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
